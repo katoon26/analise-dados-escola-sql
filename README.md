@@ -20,7 +20,9 @@ Um grande diferencial deste modelo é a tabela de **Adaptações Curriculares**,
 Abaixo está o script utilizado para popular o banco de dados com dados fictícios para testes e análises:
 
 -- ==========================================
+
 -- 1. POPULANDO A TABELA DE ALUNOS
+
 -- ==========================================
 INSERT INTO Alunos (id_aluno, nome, data_nascimento, matricula) VALUES
 (1, 'Mariana Silva', '2015-04-12', 'MAT202601'),
