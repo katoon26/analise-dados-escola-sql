@@ -24,6 +24,7 @@ Abaixo está o script utilizado para popular o banco de dados com dados fictíci
 -- 1. POPULANDO A TABELA DE ALUNOS
 
 -- ==========================================
+
 INSERT INTO Alunos (id_aluno, nome, data_nascimento, matricula) VALUES
 (1, 'Mariana Silva', '2015-04-12', 'MAT202601'),
 (2, 'Lucas Santos', '2015-08-23', 'MAT202602'),
@@ -32,31 +33,43 @@ INSERT INTO Alunos (id_aluno, nome, data_nascimento, matricula) VALUES
 (5, 'Ana Clara Costa', '2015-06-18', 'MAT202605');
 
 -- ==========================================
+
 -- 2. POPULANDO A TABELA DE PROFESSORES
+
 -- ==========================================
+
 INSERT INTO Professores (id_professor, nome, specialty) VALUES
 (101, 'Carlos Alberto', 'Matemática'),
 (102, 'Juliana Mendes', 'Artes'),
 (103, 'Fernanda Lima', 'História');
 
 -- ==========================================
+
 -- 3. POPULANDO A TABELA DE DISCIPLINAS
+
 -- ==========================================
+
 INSERT INTO Disciplinas (id_disciplina, nome_disciplina) VALUES
 (1, 'Matemática'),
 (2, 'Artes'),
 (3, 'História');
 
 -- ==========================================
+
 -- 4. POPULANDO A TABELA DE TURMAS
+
 -- ==========================================
+
 INSERT INTO Turmas (id_turma, nome_turma, ano_letivo, turno) VALUES
 (10, '6º Ano A', 2026, 'Manhã'),
 (20, '6º Ano B', 2026, 'Tarde');
 
 -- ==========================================
+
 -- 5. POPULANDO AS MATRÍCULAS (Quem estuda onde)
+
 -- ==========================================
+
 -- Alunos 1, 2 e 3 vão para o 6º Ano A
 -- Alunos 4 e 5 vão para o 6º Ano B
 INSERT INTO Matrículas (id_turma, id_aluno) VALUES
@@ -67,8 +80,11 @@ INSERT INTO Matrículas (id_turma, id_aluno) VALUES
 (20, 5);
 
 -- ==========================================
+
 -- 6. POPULANDO AS AVALIAÇÕES (O diário do professor)
+
 -- ==========================================
+
 INSERT INTO Avaliacoes (id_avaliacao, id_turma, id_disciplina, descricao, peso) VALUES
 (501, 10, 1, 'Prova de Frações', 10.0),      -- Matemática no 6º Ano A
 (502, 10, 2, 'Trabalho de Pintura', 10.0),   -- Artes no 6º Ano A
@@ -76,8 +92,11 @@ INSERT INTO Avaliacoes (id_avaliacao, id_turma, id_disciplina, descricao, peso) 
 (504, 20, 2, 'Trabalho de Pintura', 10.0);   -- Artes no 6º Ano B
 
 -- ==========================================
+
 -- 7. POPULANDO AS NOTAS DOS ALUNOS
+
 -- ==========================================
+
 INSERT INTO Notas (id_nota, id_aluno, id_avaliacao, nota_obtida) VALUES
 -- Notas da Prova de Matemática (6º Ano A)
 (1001, 1, 501, 8.5),  -- Mariana tirou 8.5
@@ -98,10 +117,14 @@ INSERT INTO Notas (id_nota, id_aluno, id_avaliacao, nota_obtida) VALUES
 (1010, 5, 504, 9.0);
 
 -- ==========================================
+
 -- 8. POPULANDO AS ADAPTAÇÕES CURRICULARES (Inclusão)
+
 -- ==========================================
+
 INSERT INTO Adaptacoes_Curriculares (id_adaptacao, id_aluno, id_disciplina, recursos_utilizados, data_registro) VALUES
 (1, 2, 1, 'Tempo estendido para realização da prova e uso de material concreto.', '2026-03-10');
+
 -- ==========================================
 
 🚀 Desafios e Consultas Analíticas (Queries)
